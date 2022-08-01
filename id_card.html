@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style type="text/css">
+    *,
+    *::before,
+    *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .layout {
+        background-color: rgb(234, 238, 241);
+        width: 550px;
+        height: 255px;
+        margin: 0 auto;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .left {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+    }
+
+    .right {
+        background-color: white;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .col1 {
+        width: 50px;
+        background-color: rgb(19, 5, 53);
+        height: 100%;
+    }
+
+    .col2 {
+        width: 20px;
+        background-color: rgb(8, 6, 128);
+        height: 100%;
+    }
+
+    .col3 {
+        width: 20px;
+        background-color: rgb(190, 19, 19);
+        height: 100%;
+    }
+
+    .col4 {
+        width: 20px;
+        background-color: rgb(221, 104, 26);
+        height: 100%;
+    }
+
+    .col5 {
+        width: 13px;
+        background-color: rgb(248, 244, 18);
+        height: 100%;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        max-width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        margin: 2rem;
+        border: 2px solid black;
+        max-width: 500px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .gradient {
+        height: 250px;
+        width: 100px;
+        background-color: red;
+        /* For browsers that do not support gradients */
+        background-image: linear-gradient(to right, purple, blue, red, orange, yellow);
+    }
+
+    /* ========== Text ========== */
+    .title {
+        color: rgb(19, 5, 53);
+        background-color: white;
+        font-size: 25px;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    .address {
+        font-size: 9px;
+    }
+
+    .head {
+        /* margin: 0 150px 0 90px; */
+        margin: 0 auto;
+        width: 80%;
+        padding: .1rem 0;
+        background-color: rgb(11, 11, 80);
+        border-radius: 10px;
+        color: white;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .name {
+        background-color: rgb(189, 10, 10);
+        color: white;
+        /* width : 400px; */
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .photo {
+        width: 120px;
+        height: 180px;
+        z-index: 2;
+        position: fixed;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        margin-bottom: 800px;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    .signs {
+        background-color: transparent;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        /* position: remove after barcode */
+        position: relative;
+        
+    }
+    .layout_back{
+        background-color: rgb(234, 238, 241);
+        width: 550px;
+        height: 250px;
+        margin: 0px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: .75fr 2fr;
+    }
+    .right_back{
+        padding: .2rem 0 .8rem 0;   
+    }
+    .instructions{
+        font-size: 12px;
+        margin-top: 14%;
+    }
+    .up_container{
+        font-size: 12px;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="layout">
+            <div class="left">
+                <div class="col1"></div>
+                <div class="col2"></div>
+                <div class="col3"></div>
+                <div class="col4"></div>
+                <div class="col5"></div>
+                <div class="photo"><img src="3243.JPG" height="140px" width="120px"></div>
+            </div>
+            <div class="right">
+                <div class="details">
+                    <h1 class="title">PARUL UNIVERSITY</h1>
+                    <p class="address"><b>P.O. Limda, Tal. Waghodia - 391760 Dist. Vadodara, Gujarat(India)</b></p>
+                    <p class="address"><b>Ph:02668-260300/307, Lib:02668-260209, Website:www.paruluniversity.ac.in</b></p>
+                    <p class="head">FACULTY OF ENGG. & TECH.</p>
+                    <h2 class="name">DINESH NARSAIAH GATLA</h2>
+                    <p><b>Enrollment No:</b> 210303124701</p>
+                    <p><b>Institute:</b> PIET</p>
+                    <p><b>Department:</b> <b>CSE-AI</b></p>
+                    <p><b>Contact No.:</b> 8919636526, 7075588671</p>
+                    <div class="barcode">
+                    <img src="BARCODE.png" height="60px" width="280px"  >
+
+                    </div>
+                    <div class="signs">
+                        
+                        <div>
+                            <img src="principal.png"height="20px" width="100px">
+                            <p>Principal</p>
+                        </div>
+                        <center><img src="stamp.png" height="40px" width="60px"></center>
+
+                        <div>
+                            <img src="student.png" height="20px" width="100px" margin-bottom>
+                            <p>Student sign.</p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section>
+        <div class="layout_back">
+            <div class="left">
+                <div class="col1"></div>
+                <div class="col2"></div>
+                <div class="col3"></div>
+                <div class="col4"></div>
+                <div class="col5"></div>
+            </div>
+            <div class="right right_back">
+                <div class="up_container">
+                <p><b>Birth Date  :</b> 24-04-2002</p>
+                <p><b>Blood Group   :</b>B+</p>
+                <p><b>Address   : </b>1-1-537 BHEEMUNIDUBBA,KORUTLA 
+                    KARIMNAGAR - 505326</p>
+                
+                <div class="instructions"><b>
+                <h3>INSTRUCTIONS:</h3>
+                <p>01. Student should keep this ID card with him/her while in the instiute campus.</p>
+                <p>02. Student is responsible for this the materials issued on this card.</p>
+                <p>04. In case of loss of issued articles/member should immediately submit a written intimation to the library. 
+                    Action will be taken as per the terms of Membership Resgistration form clause 2(B).</p>
+                <p>04.  In case of loss o ID card immediately report to the Respective Library.</p>
+                </b>
+                </div>
+            
+                </div>
+                </div>
+            </div>
+    </section>
+
+</body>
+
+</html>
